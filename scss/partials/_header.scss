@@ -1,0 +1,47 @@
+//HEADER NAVBAR
+header{
+    .navbar{
+        @include flex(row,wrap,space-between,flex-start,10px);
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.52);
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.52);
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.52);
+        a {
+            text-decoration: none;
+            color: var(--negro);
+        }
+        ul {
+            list-style-type: none;
+        }
+
+        .navbar-left{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            a img {
+                max-width: 80px;
+                min-width: 80px;
+                margin-right: 20px;
+            }
+
+            ul{
+                display: flex;
+                align-items: center;
+
+                *{
+                    margin: 10px;
+                }
+
+                div li a:hover {
+                    color: green;
+                    transition: all .3s ease-in-out, color .3s ease-in-out;
+                }
+                div li {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,19 @@
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+//NORMALiZE Y VARIABLES
+@import "./misc/variables";
+@import "./misc/mixins";
+@import "./misc/normalize";
+
+//PARTIALS
+@import "./partials/background";
+@import "./partials/footer";
+@import "./partials/header";
+
+//INDEX
+@import "./pages/index";
+@import "./pages/services";
+@import "./pages/catalogue";
+@import "./pages/contact";
+@import "./pages/help";
