@@ -105,35 +105,26 @@ footer {
 
 footer {
   margin-top: 1px;
-  padding: 15px; }
-  footer section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: no-wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px; }
-    footer section .instagram_footer {
-      display: flex; }
-      footer section .instagram_footer .instagram_logo {
-        width: 80px;
-        padding-left: 20px;
-        overflow: hidden; }
-        footer section .instagram_footer .instagram_logo a img {
-          width: 40px; }
-          footer section .instagram_footer .instagram_logo a img:hover {
-            -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-            transition: 0.3s; }
+  padding: 25px;
+  display: flex;
+  justify-content: center; }
+  footer div a {
+    width: 80px;
+    padding-left: 20px;
+    overflow: hidden; }
+    footer div a img {
+      width: 40px; }
+      footer div a img:hover {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        transition: 0.3s; }
 
 /*Breakpoint footer*/
 @media only screen and (min-width: 320px) and (max-width: 500px) {
-  footer section > * {
-    font-size: x-small; }
-  footer .instagram_logo {
+  footer a {
     padding-left: 20px;
     overflow: hidden; }
-    footer .instagram_logo img {
+    footer a img {
       width: 30px; } }
 
 header .navbar {
@@ -186,27 +177,29 @@ main .intro_desc {
     transition: .3s; }
 
 main .publication_makeup {
-  justify-content: center; }
+  justify-content: center;
+  flex-wrap: wrap; }
   main .publication_makeup .publication_makeup_intro {
     text-align: center; }
-
-main .photo1, main .photo2 {
-  width: 400px;
-  height: 400px; }
-
-main .publication_makeup_steps {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-  justify-content: space-around; }
-  main .publication_makeup_steps ul {
-    list-style-type: none; }
-  main .publication_makeup_steps .steps {
-    padding: 10px; }
-
-main .since {
-  padding-top: 50px;
-  text-align: center; }
+  main .publication_makeup .makeup_images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center; }
+    main .publication_makeup .makeup_images img {
+      width: 100%; }
+  main .publication_makeup .publication_makeup_steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    main .publication_makeup .publication_makeup_steps > * {
+      padding: 5px; }
+    main .publication_makeup .publication_makeup_steps ul {
+      list-style-type: none; }
+    main .publication_makeup .publication_makeup_steps .steps {
+      padding: 10px; }
+  main .publication_makeup .since {
+    padding-top: 50px;
+    text-align: center; }
 
 .bannerBox {
   padding-top: 4px;
@@ -214,12 +207,6 @@ main .since {
   place-items: center; }
   .bannerBox img {
     width: 100%; }
-
-@media only screen and (min-width: 320px) and (max-width: 700px) {
-  .photo1,
-  .photo2 {
-    width: 290px;
-    justify-content: center; } }
 
 /* Services */
 main .container_services section {

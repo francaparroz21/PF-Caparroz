@@ -8,9 +8,11 @@ main {
             line-height: 30px;
             color: var(--blanco);
         }
+
         a {
             color: var(--blanco);
         }
+
         a:hover {
             background-color: white;
             color: var(--negro);
@@ -18,35 +20,50 @@ main {
 
         }
     }
-    .publication_makeup{
+
+    .publication_makeup {
         justify-content: center;
+        flex-wrap: wrap;
+
         .publication_makeup_intro {
             text-align: center;
-        }    
-        
-    }
-    .photo1,.photo2 {
-        width: 400px;
-        height: 400px;
-    }
-    .publication_makeup_steps {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 5px;
-        justify-content: space-around;
-
-        ul {
-            list-style-type: none;
         }
 
-        .steps {
-            padding: 10px;
+        .makeup_images {
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+            justify-self: center;
+
+            img {
+                width: 100%;
+            }
         }
+
+        .publication_makeup_steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            &>* {
+                padding: 5px;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            .steps {
+                padding: 10px;
+            }
+        }
+
+        .since {
+            padding-top: 50px;
+            text-align: center;
+        }
+
     }
-    .since {
-        padding-top: 50px;
-        text-align: center;
-    }
+
 
 }
 
@@ -57,16 +74,5 @@ main {
 
     img {
         width: 100%;
-    }
-}
-
-
-
-@media only screen and (min-width: 320px) and (max-width: 700px) {
-
-    .photo1,
-    .photo2 {
-        width: 290px;
-        justify-content: center;
     }
 }
