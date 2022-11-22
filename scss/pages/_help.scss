@@ -10,8 +10,11 @@ main{
         flex-direction: column;
         padding: 20px;
         margin: auto;
-        article > *{
-            padding: 5px;
+        article{
+            >*{
+                padding: 5px;
+            }
+            padding: 15px;
 
             a{
                 text-decoration: none;

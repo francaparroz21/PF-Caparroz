@@ -9,6 +9,9 @@ main{
             padding: 20px;
             border: 2px solid var(--blanco);
             width: min-content;
+            p{
+                padding: 10px;
+            }
             .sur_form,.name_form,.query,.born{
                 background-color: white;
             }

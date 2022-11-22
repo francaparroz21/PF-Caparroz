@@ -24,9 +24,6 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
-  min-height: 1000px; }
-
 /* BOOSTRAP DESREEBOOT */
 .row {
   --bs-gutter-x: 0;
@@ -103,7 +100,8 @@ main,
 footer {
   font-family: 'Rubik', sans-serif;
   background: linear-gradient(rgba(20, 7, 12, 0.75), rgba(20, 7, 12, 0.75)), url(../images/background_eyebrow.PNG) no-repeat center center fixed;
-  color: var(--blanco); }
+  color: var(--blanco);
+  background-size: cover; }
 
 footer {
   margin-top: 1px;
@@ -204,11 +202,15 @@ main .publication_makeup {
     text-align: center; }
 
 .bannerBox {
-  padding-top: 4px;
+  padding-top: 5px;
   display: grid;
   place-items: center; }
   .bannerBox img {
     width: 100%; }
+
+@media only screen and (max-width: 1000px) {
+  .publication_makeup {
+    display: inline; } }
 
 /* Services */
 main .container_services section {
@@ -236,6 +238,11 @@ main .container_services section {
           transition: .5s; }
 
 /*Catalogue */
+main .catalogue_info {
+  padding: 15px; }
+  main .catalogue_info > * {
+    padding: 15px; }
+
 main .catalogue_container {
   display: grid;
   grid-area: "breast cellucontrol gelabs" "alpinemask serum gelabs";
@@ -285,6 +292,8 @@ main .contact {
     padding: 20px;
     border: 2px solid var(--blanco);
     width: min-content; }
+    main .contact form p {
+      padding: 10px; }
     main .contact form .sur_form, main .contact form .name_form, main .contact form .query, main .contact form .born {
       background-color: white; }
     main .contact form .query {
@@ -312,13 +321,15 @@ main .container_help {
   flex-direction: column;
   padding: 20px;
   margin: auto; }
-  main .container_help article > * {
-    padding: 5px; }
-    main .container_help article > * a {
+  main .container_help article {
+    padding: 15px; }
+    main .container_help article > * {
+      padding: 5px; }
+    main .container_help article a {
       text-decoration: none;
       color: var(--blanco);
       text-decoration-line: underline; }
-      main .container_help article > * a:hover {
+      main .container_help article a:hover {
         background-color: var(--blanco);
         color: var(--negro);
         transition: .3s; }
